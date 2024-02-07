@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Simple Tailwind Starter</title>
-</head>
-<body>
-  <h1 class="mx-auto bg-red-200">Simple Tailwind Starter</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/lionlogo-bw.png"
+      type="image/x-icon"
+    />
+    <title>High Rolls Festivals</title>
+  </head>
+  <body>
+    <section
+      id="hero"
+      class="hero min-h-80 flex flex-col justify-center md:min-h-screen"
+    >
+      <div class="container max-w-6xl mx-auto px-6">
+        <h1
+          class="text-center text-white text-5xl font-medium md:text-6xl lg:text-7xl md:text-right"
+        >
+          High Rolls Festivals
+        </h1>
+        <h2 class="text-center text-white text-3xl mt-4 md:text-right">
+          Sponsored by the HRMP Lions
+        </h2>
+      </div>
+    </section>
+    <section id="festivals">
+      <div class="container max-w-6xl mx-auto mt-20 px-6">
+        <div
+          class="flex flex-col space-y-24 md:flex-row md:space-y-0 md:space-x-12 md:leading-loose"
+        >
+          <!-- Cherry Festival -->
+          <div class="flex flex-col md:w-1/2">
+            <img src="images/cherries.jpg" alt="" />
+            <h3 class="text-3xl text-gray-600 text-left mt-8">
+              Cherry Festival
+            </h3>
+            <p class="text-gray-600 text-left text-lg mt-2">
+              Held on the second full weekend in June, the High Rolls Cherry
+              Festival features fruit sold by local growers, cherry pies, and an
+              abundance of food and craft vendors. The mountain setting also
+              provides a welcome escape from the summer heat.
+            </p>
+          </div>
+          <!-- Apple Festival -->
+          <div class="flex flex-col md:w-1/2">
+            <img src="images/apples.jpg" alt="" />
+            <h3 class="text-3xl text-gray-600 text-left mt-8">
+              Apple Festival
+            </h3>
+            <p class="text-gray-600 text-left text-lg mt-2">
+              On the third full weekend of September, enjoy the cool, crisp
+              autumn air at the High Rolls Apple Festival. Apples provided by
+              local growers, apple pies, apple butter, and an assortment of
+              vendors; a great setting to take care of some early holiday
+              shopping.
+            </p>
+          </div>
+        </div>
+        <div class="mt-32 text-lg text-center">- Next Event -</div>
+        <div
+          id="next-festival"
+          class="mt-2 font-bold text-gray-700 text-center text-3xl md:text-4xl"
+        >
+          Next Festival: TBA
+        </div>
+        <div
+          class="mt-16 font-bold text-gray-700 pb-4 w-3/4 border-b-2 border-b-gray-500 text-center text-2xl mx-auto md:text-3xl md:w-5/8"
+        >
+          Hours
+        </div>
+        <div
+          class="flex flex-col mx-auto mt-8 space-y-4 md:flex-row md:justify-evenly md:w-5/8 md:space-y-0"
+        >
+          <div class="flex flex-col text-center text-xl md:text-2xl">
+            <div class="font-bold">Saturday</div>
+            <div class="">9:00 AM - 5:00 PM</div>
+          </div>
+          <div class="flex flex-col text-center text-xl md:text-2xl">
+            <div class="font-bold">Sunday</div>
+            <div class="">9:00 AM - 4:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="map">
+      <div class="container max-w-6xl mx-auto mt-20 px-6">
+        <div
+          class="mt-16 font-bold text-gray-700 pb-4 w-3/4 border-b-2 border-b-gray-500 text-center text-2xl mx-auto md:text-3xl md:w-5/8"
+        >
+          Location
+        </div>
+        <div
+          class="mt-8 text-gray-700 pb-4 w-5/8 text-center text-xl mx-auto md:text-2xl md:w-5/8"
+        >
+          56 Cottage Row<br />High Rolls, NM
+        </div>
+        <div
+          class="mt-8 text-gray-700 pb-2 w-5/8 text-center text-normal mx-auto"
+        >
+          Click on the map below for directions
+        </div>
+        <div class="container max-w-6xl mx-auto mb-20">
+          <img
+            src="images/map.svg"
+            alt=""
+            onclick="mapsSelector()"
+            class="cursor-pointer"
+          />
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-800">
+      <div class="container max-w-6xl mx-auto py-6 px-6">
+        <div
+          class="flex flex-col space-y-18 text-white md:flex-row-reverse md:justify-between md:space-y-0"
+        >
+          <!-- Nav -->
+          <div
+            class="flex flex-col space-y-8 text-lg text-center md:flex-row md:justify-right md:text-right md:space-y-0 md:space-x-24"
+          >
+            <div class="flex flex-col space-y-2">
+              <h3 class="font-bold font-2xl">Links</h3>
+              <div class="hover:text-lionYellow">
+                <a href="/">Festival Home</a>
+              </div>
+              <div class="hover:text-lionYellow">
+                <a href="/vendor-information.html">Vendor Information</a>
+              </div>
+              <div class="hover:text-lionYellow">
+                <a href="/vendor-information.html#application"
+                  >Vendor Application</a
+                >
+              </div>
+              <div class="hover:text-lionYellow">
+                <a href="https://www.lionsclubs.org/en"
+                  >Lions Clubs International</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+              <h3 class="font-bold font-2xl">News</h3>
+              <div class="hover:text-lionYellow">
+                <a href="/about-us.html">About Us</a>
+              </div>
+              <div class="hover:text-lionYellow">
+                <a href="/about-us.html#services">Services</a>
+              </div>
+              <div class="hover:text-lionYellow">
+                <a href="/about-us.html#contact">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+          <!-- Logo -->
+          <div class="mx-auto mt-16 md:mx-0 md:mt-0">
+            <img src="images/lionslogo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
