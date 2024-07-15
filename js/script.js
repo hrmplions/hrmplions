@@ -30,9 +30,9 @@ function nextFestival() {
     if (festivalEnd > myDate) break;
   }
 
-  // Find the next third full weekend in September
+  // Find the next fourth full weekend in September
   for (y = currentYear; y <= currentYear + 1; y++) {
-    for (i = 1; i < 14; i++) {
+    for (i = 1; i < 21; i++) {
       var nextAppleFest = new Date(y, 8, i);
       if (nextAppleFest.getDay() === 6) {
         nextAppleFest.setDate(nextAppleFest.getDate() + 14);
