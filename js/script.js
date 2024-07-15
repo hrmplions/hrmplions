@@ -35,7 +35,7 @@ function nextFestival() {
     for (i = 1; i < 21; i++) {
       var nextAppleFest = new Date(y, 8, i);
       if (nextAppleFest.getDay() === 6) {
-        nextAppleFest.setDate(nextAppleFest.getDate() + 14);
+        nextAppleFest.setDate(nextAppleFest.getDate() + 21);
         break;
       }
     }
